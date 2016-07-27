@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Rides</title>
+    <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -53,11 +53,11 @@
                     <li>
                         <a href="services.html">Services</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="contact.html">Contact</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">rides for sell <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="portfolio-1-col.html">1 Column Portfolio</a>
@@ -76,10 +76,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li class="active">
+                            <li>
                                 <a href="blog-home-1.html">Blog Home 1</a>
                             </li>
                             <li>
@@ -123,144 +123,91 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Blog Home One
+                <h1 class="page-header">Contact
                     <small>Subheading</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li class="active">Blog Home One</li>
+                    <li class="active">Contact</li>
                 </ol>
             </div>
         </div>
         <!-- /.row -->
 
+        <!-- Content Row -->
         <div class="row">
-
-            <!-- Blog Entries Column -->
+            <!-- Map Column -->
             <div class="col-md-8">
-
-                <!-- First Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
+                <!-- Embedded Google Map -->
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-md-4">
+                <h3>Contact Details</h3>
+                <p>
+                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
                 </p>
-                <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>
-                <hr>
-                <a href="blog-post.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">
-                </a>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
-
-                <hr>
-
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
+                <p><i class="fa fa-phone"></i> 
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i> 
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
                 </p>
-                <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <a href="blog-post.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">
-                </a>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
-                <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
-
-                <hr>
-
-                <!-- Third Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <a href="blog-post.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">
-                </a>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
-                <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
-
-                <hr>
-
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="#">&larr; Older</a>
+                <p><i class="fa fa-clock-o"></i> 
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
                     </li>
-                    <li class="next">
-                        <a href="#">Newer &rarr;</a>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
                     </li>
                 </ul>
-
             </div>
+        </div>
+        <!-- /.row -->
 
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Send us a Message</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Full Name:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
                         </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
                     </div>
-                    <!-- /.row -->
-                </div>
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
-
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Phone Number:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Message:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
 
         </div>
@@ -285,6 +232,11 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
 </body>
 
