@@ -7,11 +7,23 @@
 
 
 <script>
-function sum(a, b){
-	if(isNaN(a) && isNaN(b)) {
-		return "input must be numeric";
+
+//takes a number as argument
+function isNumeric(number) {
+	//checks if number is a number
+    if(!isNaN(number)) {
+    	return true;
+    } else {
+    	//else returns false
+    	return false;
+    }
+}
+
+function sum(x, y){
+	if(isNumeric(x) && isNumeric(y)) {
+		return x + y;
 	} else {
-		return a + b;
+		return "input must be numeric";
 	}
 }
 
@@ -25,6 +37,7 @@ function multiply(x,y){
 
 
 function divide(x,y){
+	//checking is x or y are equal to 0
 	if (x == 0 || y == 0) {
 		return "Can't divide a number by zero. YO!"
 	} else {
