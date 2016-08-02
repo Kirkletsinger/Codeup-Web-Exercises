@@ -24,9 +24,12 @@ function multiply(x,y){
 }
 
 
-function divideTwoNumbers(x,y){
-	return x / y;
-
+function divide(x,y){
+	if (x == 0 || y == 0) {
+		return "Can't divide a number by zero. YO!"
+	} else {
+		return x / y;
+	}
 }
 
 function squareANumber(x){
