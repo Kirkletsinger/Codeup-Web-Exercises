@@ -7,49 +7,37 @@
 
 
 <script>
-function sum(a,b){
-	if(isNumeric(a) && isNumeric(b)) {
-		return a + b;
+function sum(a, b){
+	if(isNaN(a) && isNaN(b)) {
+		return "input must be numeric";
 	} else {
-		return "inputs must be numeric";
+		return a + b;
 	}
 }
 
-
-
-
-function subtratOneNumberFromAnother(x,y){
-	var y = 1;
-	var z = 1;
+function subtract(x,y){
 	return x - y;
 }
 
-function multiplyTwoNumbers(x,y){
-	var y = 4;
-	var x = 3;
+function multiply(x,y){
 	return x * y;
 }
 
 
 function divideTwoNumbers(x,y){
-	var y = 10; 
-	var x = 5;
 	return x / y;
 
 }
 
-function squareANumber(){
-
-    ret= [];            
-
-    for (var i = 9, len = arr.length; i < len; i++) {
-        root = Math.sqrt(arr[i]);
-        ret.push(root);
-    }
-
-    return ret;
+function squareANumber(x){
+	return multiply(x, x);
 }
 
+function sumOFSquares(x,y){
+ 	x = squareANumber(x);
+ 	y = squareANumber(y);
+ 	return sum(x,y);
+}
 </script>
 </body>
 </html>
