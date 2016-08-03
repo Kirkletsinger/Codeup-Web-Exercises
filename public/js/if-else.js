@@ -55,13 +55,28 @@ console.log(result);
 console.log(showCustermerSale("fernando", 210, 0.35, 200));
 
 
+// Exercise 3
+//returns a random number between 0 and 1
+function flipACoin() {
+	var flipACoin = Math.floor(Math.random()*2);
+	return flipACoin;
+}
 
+function shouldBuyHouseOrCar(){
+	var flipAcoin = Math.floor(Math.random()*2);
 
+	if (flipACoin() == 0) {
+		console.log("buy a car");
+	} else {
+		console.log("Buy that house!");
+	}
+}
 
 
 
 
 ////////////////
+
 
 
 
