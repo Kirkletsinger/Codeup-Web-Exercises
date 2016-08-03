@@ -57,3 +57,22 @@
     planets.sort();
     logPlanets();
 })();
+
+
+
+//write a function that takes an array amdreturns elements from that array
+function getRandomElement (arr) {
+
+}
+
+getRandomElement([1,2,3,4]); // should return 1 - 4 at random
+
+//convert a string that represents a 12 hour time to string that 
+
+
+
+var myArray = [1,2,3,4];
+
+var randomIndex = Math.floor(Math.random() * myArray.length);
+console.log(myArray)
+
