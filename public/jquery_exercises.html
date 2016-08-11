@@ -6,14 +6,14 @@
 </head>
 <body>
 
-    <h1 class="hello">Jquery!</h1>
+    <h1 class="hello">Hello World</h1>
     <p id='para'>lorem blah blah</p>     
-    <div class='zelda'>
-        <h3 class='unordered-list'>The Facts:</h3>
+    <div class='para'>
+        <h3 class='unordered-list'>The List</h3>
         <ul class='unordered-list'>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            <li class='unoredered list'>1</li>
+            <li class='unoredered list'>2</li>
+            <li class='unoredered list'>3</li>
         </ul>
     </div>  
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -33,6 +33,9 @@
                     $(this).css('color', 'red');
                 }
             );
+            $('*').css('border', '1px solid #F00');
+            $('p').css('font-size', '32px');
+
         });
     </script>
 
