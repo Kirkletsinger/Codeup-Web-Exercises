@@ -8,7 +8,7 @@
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
-            
+
             return Math.PI * Math.pow(this.radius, 2);
         },
 
@@ -30,7 +30,7 @@
     // log info about the circle
     console.log("Raw circle information");
     circle.logInfo(false);
-    console.log("Circle information rounded to the nearest whole number");
+    console.log("Circle rounded to the nearest whole number");
     circle.logInfo(true);
 
     console.log("=======================================================");
@@ -41,6 +41,6 @@
     // log info about the circle
     console.log("Raw circle information");
     circle.logInfo(false);
-    console.log("Circle information rounded to the nearest whole number");
+    console.log("Circle rounded to the nearest whole number");
     circle.logInfo(true);
 })();

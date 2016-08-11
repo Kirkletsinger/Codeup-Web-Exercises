@@ -60,19 +60,25 @@
 
 
 
-//write a function that takes an array amdreturns elements from that array
+//write a function that takes an array and returns elements from that array
 function getRandomElement (arr) {
 
 }
 
 getRandomElement([1,2,3,4]); // should return 1 - 4 at random
 
-//convert a string that represents a 12 hour time to string that 
+//convert a string that represents a 12 hour time to string that represents a 24 hour time
+function twelveToTwentyFour (timeString){
+//todo
+
+}
+
+twelveToTwentyFour('4:30pm'); //should retuen '16:30'
+twelveToTwentyFour('12:22pm'); //should return '12:22'
+twelveToTwentyFour('12:45am'); // should return '0:45'
+twelveToTwentyFour('9:00am'); // should return '09:00'
 
 
 
-var myArray = [1,2,3,4];
 
-var randomIndex = Math.floor(Math.random() * myArray.length);
-console.log(myArray)
 
