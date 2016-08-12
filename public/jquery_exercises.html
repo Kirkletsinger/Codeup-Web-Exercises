@@ -2,44 +2,39 @@
 <html>
 
 <head>
-    <title>jQuery Exercises</title>
+	<title>jQuery Exercises</title>
 </head>
 <body>
+	<h1 class="hello">Hello World</h1>
+	<p id='para'>lorem blah blah</p>     
+	<div class='para'>
+		<h3 class='unordered-list'>The List</h3>
+		<ul class='unordered-list'>
+			<li class='unoredered list'>1</li>
+			<li class='unoredered list'>2</li>
+			<li class='unoredered list'>3</li>
+		</ul>
+	</div>  
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('h1').click(function() {
+				$('h1').css('background-color', 'yellow');
 
-    <h1 class="hello">Hello World</h1>
-    <p id='para'>lorem blah blah</p>     
-    <div class='para'>
-        <h3 class='unordered-list'>The List</h3>
-        <ul class='unordered-list'>
-            <li class='unoredered list'>1</li>
-            <li class='unoredered list'>2</li>
-            <li class='unoredered list'>3</li>
-        </ul>
-    </div>  
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('h1').click(function() {
-                $('h1').css('background-color', 'yellow');
-
-            });
-            $('p').dblclick(function() {
-                $('p').css('font-size', '18px');
-            });
-            $('li').hover(
-                function() {
-                    $(this).css('color', 'red');
-                },
-                function() {
-                    $(this).css('color', 'black');
-                }
-            );
-             
-            
-            
-
-        });
-    </script>
+			});
+			$('p').dblclick(function() {
+				$('p').css('font-size', '18px');
+			});
+			$('li').hover(
+				function() {
+					$(this).css('color', 'red');
+				},
+				function() {
+					$(this).css('color', 'black');
+				}
+			);       
+		});
+	</script>
 
 </body>
 </html>
