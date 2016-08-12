@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery FAQ</title>
+	 <style>
+        .hidden {
+  display: none;
+  visibility: hidden;
+} 
+     </style>
+</head>
+<body>
+	<h1>FAQ</h1>
+		<h3>EverGlades</h3>
+	<ul>
+		<li>Kings</li>
+		<li>Cool for climbing</li>
+		<li>llll</li>
+	</ul>
+	<h3>Lassen</h3>
+	<ul>
+		<li>we</li>
+		<li>are</li>
+		<li>better</li>
+		<li>than</li>
+		<li>the</li>
+	</ul>
+	<h3>Badlands</h3>
+	<ul>
+		<li>kings</li>
+		<li>,</li>
+		<li>when</li>
+		<li>it</li>
+		<li>comes</li>
+	</ul>
+	<h3>Badlands</h3>
+	<ul>
+		<li>to</li>
+		<li>survey</li>
+		<li>taking</li>
+		<li>.</li>
+		<li></li>
+	</ul>
+	<h3>Lassen</h3>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+	'use strict'
+    //Make the first li element in each ul have font-weight: bold.
+ 	$('ul').each(function() {
+        $(this).children().first().css('font-weight', 'bold');  
+	});
+ 	//Adds the .invisible
+ 	$('li').click(function(){
+ 		$(this).parent().addClass("invisible")
+ 	});
+	
+	</script>
+
+
+</body>
+</html>
