@@ -5,37 +5,33 @@
     <title>Konami Code</title>
     <link rel="stylesheet" type="text/css" href="">
 </head>
-<body>
-  
-
+<body> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script>
         "use strict";
-
- 
-       // function easterEgg() 
+// function easterEgg() 
        var easterEgg = function(){
            alert("you got the secert password");
        };
-       // the Konami Code sequence
+// the Konami Code sequence
        var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-       // a variable to remember the index
+// a variable to remember the index
        var index = 0;
-       // add key event listener
+// adds key event listener
         $(document).keyup(function(event){
             console.log(event.keyCode);
-            // getting value of pressed key
-            var key = event.keyCode;
-            // compare the pressed key with the required key from konamiCode
+// getting value of pressed key
+           var key = event.keyCode;
+// compares the pressed key with the required key from konamiCode
             if (key == konamiCode[index]) {
-                // increase index by 1
+// increase index by 1
                 index++;
                 } else {
-                    // if you press a wrong key, i goes back to 0 (start over)
+// if you press a wrong key, i goes back to 0 (start over)
                     index = 0;
                     console.log('loser');
                 }
-               // if the last key is reached, activate easterEgg()
+// if the last key is reached, activate easterEgg()
                if (index == konamiCode.length){
                     console.log('hello world');
                     index = 0;
@@ -43,5 +39,4 @@
                };
         });
     </script>
-</body>
 </html>
