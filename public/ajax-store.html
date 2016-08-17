@@ -38,9 +38,9 @@
         $.ajax('data/inventory.json', {
          type: 'GET'
         }).done(function(inventory) {
-            $('#insertProducts').html('')
+        $('#insertProducts').html('')
         inventory.forEach(function(tool) {
-                $('#insertProducts').append("<tr><td>" + tool.title + "</td><td>" + tool.quantity + "</td><td>" + "$" + tool.price + "</td><td>" + tool.categories.join(', ') + "</td></tr>")
+        $('#insertProducts').append("<tr><td>" + tool.title + "</td><td>" + tool.quantity + "</td><td>" + "$" + tool.price + "</td><td>" + tool.categories.join(', ') + "</td></tr>")
             });
         });
     };
