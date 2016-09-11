@@ -1,6 +1,9 @@
 <?php
-$favorites = ['Family', 'Rainy days', 'Quite', 'Sleep', 'Close friends', 'Fo00d', 'Sleep Again'];
+$favorites = ['Family', 'Rainy days', 'Quite', 'Sleep', 'Close friends', 'F00d', 'Sleep Again'];
+function(pageCOntroller())
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

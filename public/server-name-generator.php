@@ -1,5 +1,5 @@
 <?php
-    function pageCont();
+    function pageController();
     {
 $adjectives = ['Nice', '', 'diligent', 'spicey', 'mild', 'zonked', 'filthy', 'loopy', 'cranky', 'moast', 'wet', 'crazy', 'mad', 'sad', 'sleepy'];
 $nouns = ['Poop', 'Door', 'Drum', 'Wall', 'Bug', 'Bar', 'ice', 'phone', 'cat', 'Window', 'Bush', 'Floor', 'street', 'liggt', 'sign'];
@@ -13,6 +13,7 @@ function randomServer($array, $array2) {
     $msg .= $array2[$randomNoun];
     return $msg;
 }
+extract(pageController());
 
 
 ?>
