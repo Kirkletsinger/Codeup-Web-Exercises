@@ -1,17 +1,18 @@
 <?php
+session_start();
 function pageController() 
 {
-    $data = [];
-    $data['message'] = '';
+    
     if (!empty($_POST)) {
-        if ($_POST['username'] == 'guest' && $_POST['password'] == 'password'){
+        if ($_POST['username'] === 'guest' && $_POST['password'] === 'password'){
+            $_SESSION['logged_in_user'] = true; 
+            $_SESSION['username'] = $_POST['username'];
+            }  
+        } 
+    if (isset($_SESSION['username'])){
         header("Location: /authorized.php");
-        die;
-    } else {
-        $data['message'] = 'Invalid login'; 
-        }
-    }  
-    return $data;
+        die();
+    }
 } 
 extract(pageController());
 ?>
