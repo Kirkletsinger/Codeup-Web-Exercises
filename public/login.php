@@ -5,7 +5,6 @@ function pageController()
     
     if (!empty($_POST)) {
         if ($_POST['username'] === 'guest' && $_POST['password'] === 'password'){
-            $_SESSION['logged_in_user'] = true; 
             $_SESSION['username'] = $_POST['username'];
             }  
         } 

@@ -1,11 +1,17 @@
 <?php
 session_start();
-if (!$_SESSION['logged_in_user']) {
-    $message = "User is not authorized.";
+function pageController(){
+if (!isset($_SESSION['username'])) {
     header("Location: /login.php");
-} else {
-    $message = $_SESSION['logged_in_user'];
+    die();
+ }
+ $data = [];
+ $data = ['username' => $_SESSION['username']];
+
+ return $data;
 }
+exract(pageController());
+
 ?>
 
 
@@ -25,12 +31,12 @@ if (!$_SESSION['logged_in_user']) {
     <main class="container">
 
         <h1>AUTHORIZED</h1> 
+        <a href="logout.php">LOGOUT</a>
 
     </main>
     
     
 
-    <script src="===PATH HERE==="></script>
 
 </body>
 
