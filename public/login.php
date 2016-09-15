@@ -1,19 +1,22 @@
 <?php
+require_once '../auth.php';
+
+
 session_start();
 function pageController() 
 {
-    
-    if (!empty($_POST)) {
-        if ($_POST['username'] === 'guest' && $_POST['password'] === 'password'){
-            $_SESSION['username'] = $_POST['username'];
-            }  
-        } 
-    if (isset($_SESSION['username'])){
-        header("Location: /authorized.php");
-        die();
+
+    if($_POST)
+    {
+        Auth::attempt(Input::get('username'), Input::get('password'));
+        if(Auth::check())
+        {
+            header('Location: authorized.php');
+        }
     }
-} 
-extract(pageController());
+    
+}
+(pageController());
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,6 +26,9 @@ extract(pageController());
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+    <?php if (isset($message)) : ?>
+        <div class="alert alert-danger" role="alert"><?= $message ?></div>
+    <?php endif; ?>
     <div class="container">
         <h1>Login Form</h1>
     <form action="login.php" method="POST">

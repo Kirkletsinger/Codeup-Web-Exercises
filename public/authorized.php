@@ -1,19 +1,22 @@
 <?php
-session_start();
-function pageController(){
-if (!isset($_SESSION['username'])) {
-    header("Location: /login.php");
-    die();
- }
- $data = [];
- $data = ['username' => $_SESSION['username']];
+require 'functions.php';
+require_once '../auth.php';
 
- return $data;
+function pageController() {
+	
+	session_start();
+	$data = [];
+	if(!Auth::check()) {
+
+		header('Location: login.php');
+		exit;
+	}
+
+	$data['username'] = escape($_SESSION['logged_in_user']);
+	return $data;
 }
-exract(pageController());
-
+extract(pageController());
 ?>
-
 
 
 <!DOCTYPE html>
@@ -27,10 +30,18 @@ exract(pageController());
 </head>
 
 <body>
+	<ul>
+		<li>Logged in user: <?= $username; ?></li>
+	</ul>
+
+
+
 
     <main class="container">
 
         <h1>AUTHORIZED</h1> 
+
+
         <a href="logout.php">LOGOUT</a>
 
     </main>
