@@ -1,22 +1,27 @@
 <?php
-require_once '../auth.php';
-
 
 session_start();
 function pageController() 
 {
-
-    if($_POST)
-    {
-        Auth::attempt(Input::get('username'), Input::get('password'));
-        if(Auth::check())
-        {
-            header('Location: authorized.php');
+    $data = [];
+    $data['alert'] = '';
+    if (!empty($_POST)) {
+        if (inputGet('username') == 'guest' && inputGet('password') == 'password') {
+            $_SESSION['logged_in_user'] = $_POST['username'];    
+            header("Location: /authorized.php"); 
+            die;
+        } else {
+            $data['alert'] =
+            '<div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                Enter a valid username and password
+            </div>'; 
         }
-    }
-    
+    }  
+    return $data;
 }
-(pageController());
+extract(pageController());
 ?>
 <!DOCTYPE html>
 <html>

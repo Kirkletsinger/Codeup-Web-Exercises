@@ -1,5 +1,5 @@
 <?php
-require 'functions.php';
+
 require_once '../auth.php';
 
 function pageController() {

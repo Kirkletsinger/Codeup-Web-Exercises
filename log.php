@@ -12,7 +12,8 @@ class Log
     }
     public function logMessage($logLevel, $message) 
     {
-        fwrite($this->handle, date('h:i:s') . " [$logLevel] $message" . PHP_EOL);
+        $time = date('Y-m-d H:i:s');
+        fwrite($this->handle, $time . " [$logLevel] $message" . PHP_EOL);
     }
     public function info($message)
     {

@@ -1,6 +1,6 @@
 <?php
-require_once '/Log.php';
-require_once '/Input.php';
+require_once '../log.php';
+require_once '../input.php';
 class Auth
 {
 	public static $password = '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm';
