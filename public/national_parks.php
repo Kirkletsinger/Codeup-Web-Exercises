@@ -114,24 +114,7 @@ extract(getTheParks($dbc));
                 </table>
             </section>
         </div>
-    <script type="text/javascript">
-    $(document).ready(function(){
-    "use strict";
-      // Toggle active class on .park-row when clicked
-      $('.park-row').click(function(){
-       $(this).toggleClass('active');
-      });
-      // Activate Bootstraps popover
-      $('[data-toggle="popover"]').popover();
-      // Set hotlink for each Park in the `.park-row`
-      $('.park-row').on('click', function() {
-        var redirectUrl = $(this).data('website');
-        window.location = redirectUrl;
-      })
-      var pageNumber = $('#pageNumber').html();
-      console.log(pageNumber);
-    });
-  </script>
+
     <!-- jQuery -->   
     <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
