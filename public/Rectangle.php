@@ -13,5 +13,10 @@
             $area = $this->height * $this->width;
             return $area . PHP_EOL;
         }
+        public function perimeter()
+        {
+            $perimeter = ($this->height * 2) + ($this->width * 2);
+            return $perimeter . PHP_EOL;
+        }
     }
 ?>
