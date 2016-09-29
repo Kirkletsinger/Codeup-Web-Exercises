@@ -1,5 +1,5 @@
-<?php
 
+<?php
 class Input
 {
     /**
@@ -11,9 +11,7 @@ class Input
     public static function has($key)
     {
         return isset($_REQUEST[$key]);
-        
     }
-   
     /**
      * Get a requested value from either $_POST or $_GET
      *
@@ -23,15 +21,39 @@ class Input
      */
     public static function get($key, $default = null)
     {
-        return (self::has($key)) ? $_REQUEST[$key] : $default;
-
+        return self::has($key) ? $_REQUEST[$key] : $default;
     }
-
-    ///////////////////////////////////////////////////////////////////////////
-    //                      DO NOT EDIT ANYTHING BELOW!!                     //
-    // The Input class should not ever be instantiated, so we prevent the    //
-    // constructor method from being called. We will be covering private     //
-    // later in the curriculum.                                              //
-    ///////////////////////////////////////////////////////////////////////////
+    /**
+     * @return bool Returns true if the current request is a POST request
+     */
+    public static function isPost()
+    {
+        return $_SERVER['REQUEST_METHOD'] === 'POST';
+    }
+    /**
+     * Prevent the creation of instances of this class
+     */
     private function __construct() {}
+    public static function getString($key){
+      $value = self::get($key);
+      if(!is_string($value)){
+        throw new InvalidEntry("Error: Input must be a string.");
+      }
+      $value = trim($value);
+      if(empty($value)){
+        throw new EmptyEntry("Error: Input is empty.");
+      }
+      return $value;
+    }
+    public static function getNumber($key){
+      $value = self::get($key);
+      if(!is_numeric($value)){
+        throw new InvalidEntry("Error: Input must be a number.");
+      }
+      if(empty($value)) {
+        throw new EmptyEntry("Error: Input is empty");
+      }
+      $value = floatval($value);
+      return $value;
+    }
 }

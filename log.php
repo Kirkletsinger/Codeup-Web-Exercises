@@ -1,30 +1,56 @@
 <?php
-class Log 
-{
-    public $filename;
-    public $handle;
-
-    
-    public function __construct($prefix = 'log') 
+    require_once '..Input.php';
+    class Log
     {
-        $this->filename = $prefix . '-' . date('Y-m-d') . '.log';
-        $this->handle = fopen($this->filename, 'a');
+        private $filename;
+        private $handle;
+        public function __construct ($prefix = 'log')
+        {
+            $this->setFilename($prefix);
+            $this->handle = fopen($this->getFilename(), 'a');
+        }
+        protected function setFilename($prefix)
+        {
+            if (is_string($prefix))
+            {
+                $this->filename = "log/" . trim($prefix) . "-" . date('Y-m-d') . '.log';
+            } else
+            {
+                die('please ensure prefix is input as a string');
+            }
+            if (!touch($this->filename) && !is_writable($this->filename))
+            {
+                die('please ensure prefix is input as a string');
+            }
+        }
+        public function getFilename()
+        {
+            return $this->filename;
+        }
+        public function logMessage ($logLevel, $message)
+        {
+            $logSpecificTime =  date("Y-m-d H:i:s");
+            $stringToWrite =  "{$logSpecificTime} [{$logLevel}] {$message}";
+            fwrite($this->handle, PHP_EOL . $stringToWrite);
+        }
+        public function logInfo ($message)
+        {
+            return $this->logMessage('INFO', $message);
+        }
+        public function logError ($message)
+        {
+            return $this->logMessage('ERROR', $message);
+        }
+        public function logWarning ($message)
+        {
+            return $this->logMessage('WARNING', $message);
+        }
+        public function __destruct ()
+        {
+            if (isset($this->handle))
+            {
+                fclose($this->handle);
+            }
+        }
     }
-    public function logMessage($logLevel, $message) 
-    {
-        $time = date('Y-m-d H:i:s');
-        fwrite($this->handle, $time . " [$logLevel] $message" . PHP_EOL);
-    }
-    public function info($message)
-    {
-        $this->logMessage('INFO', $message);
-    }
-    public function error($message) 
-    {
-        $this->logMessage('ERROR', $message);
-    }
-    public function __destruct() 
-    {
-        fclose($this->handle);
-    }
-}
+?>
